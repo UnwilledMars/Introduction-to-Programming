@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scripture</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        function name_into_scripture() {
+            let name = document.getElementById('nameInputBox').value;
+            let scripture = name + " Wept.";
+            document.getElementById('outputDiv').innerHTML = scripture;
+        }
+    </script>
+    <button type="button" onclick="name_into_scripture()">Enter Christ's First Name:</button>
+    <input type="text" id="nameInputBox">
+    <div id="outputDiv"></div>
+</body>
+</html>
