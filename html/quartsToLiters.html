@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mileage Calculator</title>
+</head>
+<body>
+    <script>
+    "use strict";
+    function quartConverter() {
+        let quarts = prompt("Enter the number of quarts you have: ");
+        let liters = quarts * 0.946352946;
+        alert("You have "+ liters + " quarts.");
+    }
+    </script>
+    <div id="button_container">
+        <button type="button" onclick="quartConverter()" id="quartConverterButton">Click to convert quarts to liters.</button>
+    </div>
+    <h3>One quart is about .946 liters. One liter is about 1.056 quarts.</h3>
+    <h4>Use the list below for general use and the button above for larger or more accurate measurements.</h4>
+    <p>1 Quart = .946 Liters</p>
+    <p>2 Quarts = 1.893 Liters</p>
+    <p>3 Quarts = 2.839 Liters</p>
+    <p>4 Quarts = 3.785 Liters</p>
+    <p>5 Quarts = 4.732 Liters</p>
+    <p>6 Quarts = 5.678 Liters</p>
+    <p>7 Quarts = 6.624 Liters</p>
+    <p>8 Quart = 7.571 Liters</p>
+
+</body>
+</html>

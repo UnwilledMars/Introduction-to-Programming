@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mileage Calculator</title>
+</head>
+<body>
+    <script>
+    "use strict";
+    function mileageCalculator() {
+        let startOdom = prompt("Enter the cars odometer from before the trip: ");
+        let endOdom = prompt("Enter the cars odometer from after the trip: ");
+        let miles = endOdom - startOdom;
+        let gallonsUsed = prompt("Enter the number of gallons used on the trip: ");
+        let avgMileage = miles/gallonsUsed;
+        alert("You averaged about " + avgMileage + " miles per gallon.");
+    }
+    </script>
+    <div id="button_container">
+        <button type="button" onclick="mileageCalculator()" id="mileageButton">Click to find your average mileage.</button>
+    </div>
+
+
+</body>
+</html>
