@@ -1,0 +1,55 @@
+
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Volume of a Torus</title>
+<script>
+
+function computeVolume() {
+    let n = 3.14*3.14;
+    let a = document.getElementById("inner").value;
+    let b = document.getElementById("outer").value;
+    let vol = n*(a+b)*((a-b)*(a-b));
+    vol = vol/4;
+    document.getElementById("volume").innerHTML = vol;
+}
+
+</script>
+</head>
+
+<body>
+    <h1>Volume of a Torus</h1>
+    Inner radius <input type="text" id="inner"><br>
+    Outer radius <input type="text" id="outer"><br>
+    <button type="button" onclick="computeVolume()">Volume</button><br>
+    Volume <div id="volume"></div>
+</body>
+</html>
+
+<!--
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Rate of Change</title>
+<script>
+function computeRateOfChange() {
+    let n = 3.14;
+    let a = document.getElementById("inner").value;
+    let b = document.getElementById("outer").value;
+    let v = 4;
+    document.getElementById("rate").innerHTML = v;
+}
+</script>
+</head>
+
+<body>
+    <h1>Rate of Change</h1>
+    Previous Price <input type="text" id="inner"><br>
+    Current Price <input type="text" id="outer"><br>
+    <button type="button" onclick="computeRateOfChange()">Rate of Change</button><br>
+    Rate of Change <div id="rate"></div>
+</body>
+</html>
+-->
