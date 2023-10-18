@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Quiz</title>
+</head>
+<body>
+    <script>
+        "use strict"
+        function test() {
+            let input1 = parseFloat(document.getElementById("left_in").value);
+            let input2 = parseFloat(document.getElementById("right_in").value);
+            let operator = document.getElementById("operator_in").value;
+            let answer = parseFloat(document.getElementById("answer_in").value);
+            if (operator == "+") {
+                if(input1 + input2 == answer) {
+                    alert("Correct! Keep going!")
+                } else {
+                    alert("That was wrong try again.")
+                }
+            } else if (operator == "-") {
+                if(input1 - input2 == answer) {
+                    alert("Correct! Keep going!")
+                } else {
+                    alert("That was wrong try again.")
+                }
+            } else if (operator == "*") {
+                if(input1 * input2 == answer) {
+                    alert("Correct! Keep going!")
+                } else {
+                    alert("That was wrong try again.")
+                }
+            } else if (operator == "/") {
+                if(input1 / input2 == answer) {
+                    alert("Correct! Keep going!")
+                } else {
+                    alert("That was wrong try again.")
+                }
+            }
+        }
+    </script>
+    <h3>Test Your Math Skills</h3>
+    <h4>Put a number in the 1st and 3rd box. One of the following in the second: ( +, -, *, / ), and your answer in the 4th</h4>
+    <input type="text" id="left_in">
+    <input type="text" id="operator_in">
+    <input type="text" id="right_in">
+    = <input type="text" id="answer_in">
+    <br><button type="button" id="check_box" onclick="test()">Check</button>
+</body>
+</html>

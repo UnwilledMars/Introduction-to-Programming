@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footwear</title>
+</head>
+<body>
+    <script>
+        function shoe_chooser(){
+            let wheather = prompt("Enter the wheather: ");
+            let shoe_type = "shoes";
+            if (wheather == "hot" || "Hot") {
+                shoe_type = "sandals";
+                alert("You should wear " + shoe_type + ".")
+            } else if (wheather == "rain" || "Rain") {
+                shoe_type = "galoshes"
+                alert("You should wear " + shoe_type + ".")
+            } else if (wheather == "snow" || "Snow") {
+                shoe_type = "boots"
+                alert("You should wear " + shoe_type + ".")
+            } else {
+                shoe_type = "shoes"
+                alert("You should wear " + shoe_type + ".")
+            }
+        }
+    </script>
+    <h2>What type of foorwear should you wear today?</h2>
+    <button type="button" onclick="shoe_chooser()" id="hot_button">Push me to find out</button>
+
+</body>
+</html>
+
+
+<!-- A failed attempt to understand switch
+    <script>
+        function shoe_chooser(){
+            let wheather = prompt("Enter the wheather: ");
+            let shoe_type = "shoes";
+
+            switch(wheather.get()) {
+                case hot:
+                    shoe_type = "sandals";
+                    alert(shoe_type);
+                    break;
+                default:
+                    alert("That didn;t work")
+            }
+        }
+    </script>
+-->
