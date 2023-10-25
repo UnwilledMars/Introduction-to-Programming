@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm</title>
+</head>
+<body>
+    <script>
+    function alarm() {
+        let now = new Date();
+        let month = now.getMonth();
+        let dayOfMonth = now.getDate();
+        let dayOfWeek = now.getDay();
+        let singledayNumber = (month + dayOfMonth + dayOfWeek)
+        alert(singledayNumber)
+        if (dayOfWeek != (0 || 6) && ) {
+        }
+            
+    }
+    </script>
+
+<button id="alarmButton"  onclick="alarm()">Alarm Check</button>
+    ALARM<div id="alarm"></div>
+</body>
+</html>
