@@ -9,23 +9,26 @@
     <script>
         function computeDiscount() {
             let dayofweek = new Date().getDay();
-            if (dayofweek != (2 || 3)) {
+            let subtotal = document.getElementById("input_subtotal").innerHTML;
+            let total = (subtotal - (subtotal * 0.1) + (subtotal * 0.06));
+            alert(subtotal);
+            alert(total);
+            if (dayofweek != 2 || 3) {
                 alert("Sorry, you do not qualify for a discount.");
             } else {
-                
+                alert();
             }
-            let subtotal = document.getElementById("input_subtotal").innerHTML;
 
-            document.getElementById("dayoftheweek").innerHTML = dayofweek;
+            document.getElementById("total").innerHTML = total;
         }
     </script>
 
     
-    <input type="text" id="input_box">
+    Input your subtotal:<input type="text" id="input_box">
 
     <div id="button_container">
         <button id="any_button" onclick="computeDiscount()">Check your discount</button>
-        <div id="dayoftheweek"></div>
+        <br>Total:<div id="total"></div>
     </div>
 </body>
 </html>

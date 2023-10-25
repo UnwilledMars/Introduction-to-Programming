@@ -3,24 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alarm</title>
+    <title>Alarm Check</title>
 </head>
 <body>
     <script>
-    function alarm() {
-        let now = new Date();
-        let month = now.getMonth();
-        let dayOfMonth = now.getDate();
-        let dayOfWeek = now.getDay();
-        let singledayNumber = (month + dayOfMonth + dayOfWeek)
-        alert(singledayNumber)
-        if (dayOfWeek != (0 || 6) && ) {
-        }
-            
-    }
-    </script>
+        
+        function alarm() {
+            let now = new Date();
+            let month = now.getMonth();
+            let dayOfMonth = now.getDate();
+            alert(month);
+            alert(dayOfMonth);
+            let alarmstatus = true;
+            let alarmtext = "WAKE UP! WAKE UP!";
+            if (month == 0 || 6 || 11) { //checks if month is a holiday month then checks day and month for change if alarmstatus
+                if ((month == 0) && (dayOfMonth == 1)){
+                    alarmstatus = false;
+                } if ((month == 6) && (dayOfMonth == 4)){
+                    alarmstatus = false;
+                } if ((month == 11) && (dayOfMonth == 25)){
+                    alarmstatus = false;
+                }
+            }
 
-<button id="alarmButton"  onclick="alarm()">Alarm Check</button>
-    ALARM<div id="alarm"></div>
+            if (alarmstatus == false) { //checks if alarm needs to be changed
+                alarmtext = "Sleep In.";
+                document.getElementById("alarmstatus").innerHTML = alarmtext;
+            } else {
+                document.getElementById("alarmstatus").innerHTML = alarmtext;
+            }
+        } //end of alarm function
+    </script>
+    
+    <div id="button_container">
+        <button id="any_button" onclick="alarm()">Alarm Check</button>
+        <br><br>Alarm Status: <div id="alarmstatus"></div>
+    </div>
 </body>
 </html>
