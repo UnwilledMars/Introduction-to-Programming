@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oddsum Calculator</title>
+</head>
+<body>
+    <script>
+        function sumOdds(){
+            let userInput = parseInt(document.getElementById("userTextBox").value);
+            alert(userInput);
+            let oddsum = 0
+            for (let i = 1; i <= userInput; i +=2){
+                //alert("i is " + i);
+                oddsum += i;
+            }
+            alert("The odds summed up for your number is " + oddsum);
+
+        }
+    </script>
+    <input type="text" id="userTextBox">
+    <button onclick="sumOdds()">Sum the odds of your number together</button>
+</body>
+</html>
