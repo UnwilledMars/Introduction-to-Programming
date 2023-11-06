@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Powers of Two</title>
+</head>
+<body>
+    <script>
+        function powerPrinter(){
+            let internal_string = "1";
+            for (let i = 1; i <= 31; i++){     
+                let value = 2**i;
+                internal_string = (internal_string + ", " + value);
+                //alert(internal_string);
+                document.getElementById("powerprint").innerText = internal_string;
+                
+            }
+        }
+    </script>
+</body>
+<button onclick="powerPrinter()" id="userTextBox">Click to show the powers of two</button>
+<br>Powers of two:
+<div id="powerprint"></div>
+</html>

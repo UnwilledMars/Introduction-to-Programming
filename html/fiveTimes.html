@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Five Times</title>
+</head>
+<body>
+    <script>
+        function fivetimes(){
+            let internal_string = "";
+            for (let i = 1; i <= 12; i++){     
+                let value = 5*i;
+                internal_string = (internal_string + "5 * " + i + " = " + value + "\n");
+                //alert(internal_string);
+                document.getElementById("fiveprint").innerText = internal_string;
+                
+            }
+        }
+    </script>
+</body>
+<button onclick="fivetimes()" id="userTextBox">Click to execute fiveTimes</button>
+<br>Five Times:
+<div id="fiveprint"></div>
+</html>
