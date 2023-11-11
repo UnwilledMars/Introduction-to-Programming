@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam2.19 - Number Test</title>
+</head>
+<body>
+    <script>
+        function exam(){
+            let num1 = parseFloat(document.getElementById("one").value);
+            let num2 = parseFloat(document.getElementById("two").value);
+            let result = false;
+            let total = num1 + num2;
+            //alert(num1 + ", " + num2 + ", " + total);
+            if (total > 20){
+                result = true;
+                document.getElementById("output").innerHTML = result;
+            }
+            if (num1 > 5 && num2 > 5){
+                result = true;
+                document.getElementById("output").innerHTML = result;  
+            }
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+
+    Please enter two numbers:
+    <input type="text" id="one" size="5">
+    <input type="text" id="two" size="5">
+    <button type="button" onclick="exam()">Click</button>
+    <div id="output"></div>
+</body>
+</html>
