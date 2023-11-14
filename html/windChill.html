@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wind Chill Calculator</title>
+</head>
+<body>
+
+    <script>
+        function doInputOutput(){
+            //alert();
+            temp = document.getElementById("temp").value;
+            wspeed = document.getElementById("wspeed").value;
+            let f = windChill(temp, wspeed);
+            document.getElementById("outputDiv").innerHTML = f;
+        }
+        function windChill(temp, wspeed){
+            let f = 35.74 + (.6215*temp) - (35.75*(wspeed**.16)) + (.4275 * temp * (wspeed**.16));
+            //alert(f);
+            //f = Math.ceil(f); uncomment to round up to nearest whole number
+            return f;
+        }
+    </script>
+    Temperature<input type="text" id="temp">
+    <br>
+    Wind Speed<input type="text" id="wspeed">
+    <br>
+    <button onclick="doInputOutput()">Click for apparent temperature</button>
+    <div id="outputDiv"></div> degrees F
+    
+</body>
+</html>
