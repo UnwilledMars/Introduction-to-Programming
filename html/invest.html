@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invest</title>
+</head>
+<body>
+    
+<script>
+    function doFV() {
+        let principal = parseFloat(document.getElementById("principal").value);
+        //alert(principal);
+        let rate = parseFloat(document.getElementById("rate").value);
+        //alert(rate);
+        let years = document.getElementById("years").value;
+        //alert(years);
+        let periods = document.getElementById("periods").value;
+        //alert(periods);
+        computeFutureValue(principal, rate, years, periods);
+    }
+
+    function computeFutureValue(principal, rate, years, periods){
+        let future_value = principal*(1 + (rate/periods))**(years*periods);
+        document.getElementById("outputDiv").innerHTML = future_value.toFixed(2);   //toFixed(n) sets the number(n) of decimals to show on your number
+    }
+</script>
+
+Amount invested (principal): <input type="text" id="principal"><br>
+Annual Rate: <input type="text" id="rate"><br>
+Length of investment (years): <input type="text" id="years"><br>
+Periods per year: <input type="text" id="periods"><br>
+<button onclick="doFV()">Compute Future Value</button>
+<div id="outputDiv"></div>
+</body>
+</html>

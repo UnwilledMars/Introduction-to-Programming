@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan</title>
+</head>
+<body>
+    <script>
+        function doPayment() {
+            let principal = parseFloat(document.getElementById("principal").value);
+            //alert(principal);
+            let rate = parseFloat(document.getElementById("rate").value);
+            //alert(rate);
+            let years = parseInt(document.getElementById("years").value);
+            //alert(years);
+            let periods = parseInt(document.getElementById("periods").value);
+            //alert(periods);
+            computePayment(principal, rate, years, periods);
+        }
+        function computePayment(principal, rate, years, periods){
+            let r = rate/periods;
+            let n = years*periods;
+            let payment = (principal*r)/(1-(1+r)**(-n));
+            document.getElementById("paymentDiv").innerHTML = payment.toFixed(2);   //toFixed(n) sets the number(n) of decimals to show on your number
+        }
+
+
+        function doBalance() {
+            let principal = parseFloat(document.getElementById("principal").value);
+            //alert(principal);
+            let rate = parseFloat(document.getElementById("rate").value);
+            //alert(rate);
+            let years = document.getElementById("years").value;
+            //alert(years);
+            let periods = document.getElementById("periods").value;
+            //alert(periods);
+            let payments = document.getElementById("payments").value;
+            //alert(payments);
+            computeBalance(principal, rate, years, periods, payments);
+        }
+        function computeBalance(principal, rate, years, periods, payments){
+            let r = rate/periods;
+            let m = parseFloat(document.getElementById("paymentDiv").innerHTML);
+            //alert(m);
+            let p1 = principal*((1+r)**payments);
+            let p2 = (1+r)**payments;
+            let balance = p1-((m*(p2-1)/r))
+            document.getElementById("payoffDiv").innerHTML = balance.toFixed(2);   //toFixed(n) sets the number(n) of decimals to show on your number
+        }
+
+    </script>
+    
+    Amount borrowed (principal): <input type="text" id="principal"><br>
+    Annual interest Rate: <input type="text" id="rate"><br>
+    Length of investment (years): <input type="text" id="years"><br>
+    Payments per year: <input type="text" id="periods"><br>
+    <button onclick="doPayment()">Compute payment</button>
+    <div id="paymentDiv"></div>
+
+    Number of payments made to date: <input type="text" id="payments">
+    <button onclick="doBalance()">Compute payoff amount</button>
+    <div id="payoffDiv"></div>
+</body>
+</html>
