@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Exam q21</title>
+</head>
+<body>
+    <script>
+        function caller(){
+            let input1 = document.getElementById("start").value;
+            let input2 = document.getElementById("end").value;
+            let input3 = document.getElementById("months").value;
+            alert(depreciation(input1, input2, input3));
+        }
+        function depreciation(startValue, endValue, months){
+            let d = (startValue - endValue)/months;
+            return(d.toFixed(2));
+        }
+    </script>
+    <input type="text" id="start">Start Value<br>
+    <input type="text" id="end">End Value<br>
+    <input type="text" id="months">Months Depricated<br>
+    <button onclick="caller()">Calculate</button>
+</body>
+</html>

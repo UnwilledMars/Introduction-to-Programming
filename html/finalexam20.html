@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Exam q20</title>
+</head>
+<body>
+    <script>
+        function callfuntion(){
+            let input1 = document.getElementById("given").value;
+            let input2 = document.getElementById("family").value;
+            let fn = makeFullName(input1, input2);
+            alert(fn);
+        }
+        function makeFullName(givenName, familyName){
+            return(familyName + ", " + givenName)
+        }
+    </script>
+    <input type="text" id="given">Given Name<br>
+    <input type="text" id="family">Family Name<br>
+    
+    <button onclick="callfuntion()">makeFullName</button>
+</body>
+<!--May have over complicated this but wasnt sure exactly how it should be set up, originally had the check inputs just set as the arguements for line 13 but changed it cause it seemed like too little for the question and it was so ridgid that you could only check the names already hard coded in-->
+</html>

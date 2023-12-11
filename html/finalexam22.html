@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Exam q22</title>
+</head>
+<body>
+    <script>
+        function caller(){
+            const list1 = [ -3, 0, 7.1, 5 ];
+            alert(getLast(list1))
+            const list2 = [ 17, 8, 9, 5, 20 ];
+            alert(getLast(list2))
+            const list3 = [ 5, -2.1, 6.3, 9, 5, 13 ];
+            alert(getLast(list3))
+        }
+
+        function getLast(list){
+            let last = list.length-1;
+            return list[last];
+        }
+    </script>
+    <button type="button" onclick="caller()">Button</button>
+</body>
+</html>

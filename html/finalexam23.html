@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Exam q23</title>
+</head>
+<body>
+    <script>
+        function caller(){
+            var list1 = [70, 1010, 950, 2014, 6];
+            var score = averageBig(list1);
+            alert(score);
+            var list2 = [ -72.3, 3000, 873, 2312, 68, 7501.3 ];
+            var score = averageBig(list2);
+            alert(score);
+            var list3 = [ 70, 950, 671, 6 ];
+            var score = averageBig(list3);
+            alert(score);
+        }
+        function averageBig(list){
+            let averageDiv = 0;
+            let div = 0;
+            for(let i = 0; i < list.length; i++){
+                if (list[i] > 1000) {
+                    averageDiv += list[i];
+                    div++;
+                }
+            }
+            let result = (averageDiv/div).toFixed(2);
+            if (div == 0){
+                result = 0;
+            }
+            return(result);
+        }
+    </script>
+    <button onclick="caller()">Button</button>
+</body>
+</html>
